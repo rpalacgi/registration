@@ -30,7 +30,13 @@
 	<s:property value="address" /> <br/>
 	
 	<s:label value="Color" />
-	<s:property value="color" /> <br/>
+	<s:property value="selectedColor" /> <br/>
+	
+	<s:label value="Subscribed" />
+	<s:property value="subscription" /> <br/>
+	
+	<s:label value="Hobbies" />
+	<s:property value="selectedHobbies" /> <br/>
 	
 </body>
 </html>

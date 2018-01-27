@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 public class RegisterAction extends ActionSupport {
@@ -6,8 +9,84 @@ public class RegisterAction extends ActionSupport {
 	Integer age;
 	String  email;
 	String  gender;
-	String  color;
 	String  address;
+	String  selectedColor;
+	
+	List<String> colors;
+	boolean subscription;
+	
+	List<String> hobbies;
+	
+	String selectedHobbies;
+	
+	public String initializeFormFields() {
+		initializeColors();
+		initializeHobbies();
+		return "input";
+	}
+	
+	public String execute() {
+		
+		if(subscription == true) {
+			System.out.print("True");
+		} else {
+			System.out.println("False");
+		}
+		return "success";
+	}
+	
+	public void initializeColors() {
+		colors = new ArrayList<String>();
+		colors.add("Red");
+		colors.add("Blue");
+		colors.add("Green");
+		colors.add("White");
+	}
+	
+	public void initializeHobbies() {
+		hobbies = new ArrayList<String>();
+		hobbies.add("Violin");
+		hobbies.add("Electronics");
+		hobbies.add("Programming");
+		hobbies.add("Web Design");
+	}
+	
+	public String getSelectedHobbies() {
+		return selectedHobbies;
+	}
+
+
+	public void setSelectedHobbies(String selectedHobbies) {
+		this.selectedHobbies = selectedHobbies;
+	}
+	
+	public List<String> getHobbies() {
+		return hobbies;
+	}
+
+
+	public void setHobbies(List<String> hobbies) {
+		this.hobbies = hobbies;
+	}
+
+	public boolean isSubscription() {
+		return subscription;
+	}
+
+
+	public void setSubscription(boolean subscription) {
+		this.subscription = subscription;
+	}
+
+	
+	public List<String> getColors() {
+		return colors;
+	}
+
+	public void setColors(List<String> colors) {
+		this.colors = colors;
+	}
+
 
 	public String getAddress() {
 		return address;
@@ -17,12 +96,12 @@ public class RegisterAction extends ActionSupport {
 		this.address = address;
 	}
 
-	public String getColor() {
-		return color;
+	public String getSelectedColor() {
+		return selectedColor;
 	}
 
-	public void setColor(String color) {
-		this.color = color;
+	public void setSelectedColor(String selectedColor) {
+		this.selectedColor = selectedColor;
 	}
 
 	public String getGender() {
