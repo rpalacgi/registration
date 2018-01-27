@@ -6,6 +6,24 @@ public class RegisterAction extends ActionSupport {
 	Integer age;
 	String  email;
 	String  gender;
+	String  color;
+	String  address;
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
 
 	public String getGender() {
 		return gender;

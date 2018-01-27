@@ -24,7 +24,13 @@
 	<s:property value="age"/> <br/>
 	
 	<s:label value="Email:" />
-	<s:property value="email" />
+	<s:property value="email" /> <br/>
+	
+	<s:label value="Address:" />
+	<s:property value="address" /> <br/>
+	
+	<s:label value="Color" />
+	<s:property value="color" /> <br/>
 	
 </body>
 </html>
