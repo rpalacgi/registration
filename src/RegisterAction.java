@@ -1,11 +1,11 @@
 import com.opensymphony.xwork2.ActionSupport;
 
 public class RegisterAction extends ActionSupport {
-	String firstName;
-	String lastName;
+	String  firstName;
+	String  lastName;
 	Integer age;
-	String email;
-	String gender;
+	String  email;
+	String  gender;
 
 	public String getGender() {
 		return gender;
@@ -47,7 +47,7 @@ public class RegisterAction extends ActionSupport {
 		this.email = email;
 	}
 
-	public void validate() 
+	/*public void validate() 
 	{
 		if(firstName.equals("")) {
 			addFieldError("firstName", "First name is required");
@@ -68,6 +68,6 @@ public class RegisterAction extends ActionSupport {
 		if(age < 18) {
 			addFieldError("age", "Age must be 18 or more");
 		}
-	}
+	}*/
 
 }
